@@ -16,6 +16,7 @@ import java.util.List;
 public class BookController {
     private final BookService bookService;
 //All CRUD
+      @GetMapping("/get")
     public ResponseEntity getAll() {
         List<Book> books = bookService.getAll();
         return ResponseEntity.status(200).body(books);
